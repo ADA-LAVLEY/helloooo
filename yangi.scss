@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+$bgc:brown;
+
+@mixin df($jc,$al){
+    display: flex;
+    justify-content: $jc;
+    align-items: $al;
+}
+@mixin dg($gtc,$gg){
+    display: grid;
+    grid-template-columns: $gtc;
+    grid-gap: $gg;
+}
+@mixin dgr($gtr,$gg){
+    display: grid;
+    grid-template-rows: $gtc;
+    grid-gap: $gg;
+}
+
+header {
+   
+    nav{
+      @include df(space-around,center);
+      padding-top: 30px;
+
+      .link {
+        i{
+            display: none;
+        }
+        a{
+            padding: 0px 20px;
+        }
+     
+      }
+    }
+}
+main {
+    @include dg(1fr 5fr,10px);
+    .link {
+        @include df(space-around,center )
+    }
+}
+
+
+
+@media(max-width:768px){
+    
+    header {
+        nav{
+            .link {
+                display: flex;
+                a{
+                   display: none;
+                }
+                i {
+                    display: block;
+                    margin-right: 20px;
+                }
+              }
+        }
+    }
+}
+
+@media(max-width:425px){
+
+}

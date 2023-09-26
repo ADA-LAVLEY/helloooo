@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 30px;
+}
+header nav .link i {
+  display: none;
+}
+header nav .link a {
+  padding: 0px 20px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-gap: 10px;
+}
+main .link {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  header nav .link {
+    display: flex;
+  }
+  header nav .link a {
+    display: none;
+  }
+  header nav .link i {
+    display: block;
+    margin-right: 20px;
+  }
+}/*# sourceMappingURL=yangi.css.map */
